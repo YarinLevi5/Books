@@ -1,0 +1,6 @@
+<li>
+  {{ book?.title }}
+  <app-characters [characters]="book?.characters"></app-characters>
+
+  {{ book?.date | date }}
+</li>
