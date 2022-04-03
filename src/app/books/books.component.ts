@@ -7,6 +7,11 @@ import { BookService } from '../services/book.service';
   styleUrls: ['./books.component.scss'],
 })
 export class BooksComponent implements OnInit {
+  @Input() genre = '';
+
+  selectedGenre(event: any) {
+    this.genre = event.target.value;
+  }
   @Input() books: Book[] = [];
   constructor(private bookService: BookService) {
     this.books = this.bookService.getBooks();

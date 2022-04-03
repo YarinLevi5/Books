@@ -1,5 +1,22 @@
-<h1>Books</h1>
+<div class="filter">
+  <label>
+    Genre :
+    <select (change)="selectedGenre($event)">
+      <option value="horror">Horror</option>
+      <option value="comedy">Comedy</option>
+      <option value="action">Action</option>
+      <option value="crime">Crime</option>
+      <option value="romance">Romance</option>
+      <option value="drama">Drama</option>
+      <option value="fantasy">Fantasy</option>
+      <option value="animation">Animation</option>
+    </select>
+  </label>
+</div>
 
-<ol>
-  <app-book *ngFor="let book of books" [book]="book"></app-book>
-</ol>
+<div class="books">
+  <app-book
+    *ngFor="let book of books | filterByGenre: genre"
+    [book]="book"
+  ></app-book>
+</div>

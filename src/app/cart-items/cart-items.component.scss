@@ -1,0 +1,18 @@
+.account {
+  background-color: #beb9b9;
+  text-align: center;
+  width: 400px;
+  height: 570px;
+  .cart-heading {
+    display: flex;
+    justify-content: center;
+    .shopping-cart {
+      width: 40px;
+      margin: 20px;
+    }
+  }
+
+  table {
+    width: 100%;
+  }
+}

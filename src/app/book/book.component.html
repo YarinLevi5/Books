@@ -1,6 +1,17 @@
-<li>
-  {{ book?.title }}
-  <app-characters [characters]="book?.characters"></app-characters>
-
-  {{ book?.date | date }}
-</li>
+<div class="book">
+  <img src="{{ book?.image }}" alt="{{ book?.title }}" class="image" />
+  <p>Title : {{ book?.title }}</p>
+  <div class="characters">
+    Characters :
+    <app-characters [characters]="book?.characters"></app-characters>
+  </div>
+  <p>Genre : {{ book?.genre }}</p>
+  <p>Date : {{ book?.date | date }}</p>
+  <p>price : {{ book?.price | currency: "NIS" }}</p>
+  <div class="bottomContainer">
+    <button (click)="increment()" class="plus">+</button>
+    <input type="text" [value]="amount" class="amount" />
+    <button (click)="decrement()" class="minus">-</button>
+  </div>
+  <button class="add-button" (click)="addTOCart()">Add to Cart</button>
+</div>

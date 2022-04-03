@@ -1,0 +1,35 @@
+<div class="account">
+  <div class="cart-heading">
+    <h1>Cart</h1>
+    <img
+      src="assets/images/shop.png"
+      alt="shopping-cart"
+      class="shopping-cart"
+    />
+  </div>
+  <p *ngIf="empty">Your Shopping Cart is empty</p>
+  <table mat-table [dataSource]="items" class="mat-elevation-z8" *ngIf="!empty">
+    <ng-container matColumnDef="image">
+      <th mat-header-cell *matHeaderCellDef>Image</th>
+      <td mat-cell *matCellDef="let item">{{ item.image }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef>Title</th>
+      <td mat-cell *matCellDef="let item">{{ item.title }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef>Price</th>
+      <td mat-cell *matCellDef="let item">{{ item.price }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="qty">
+      <th mat-header-cell *matHeaderCellDef>Qty</th>
+      <td mat-cell *matCellDef="let item">{{ item.qty }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>
