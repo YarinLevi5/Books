@@ -13,6 +13,7 @@ import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { CartItemsComponent } from './cart-items/cart-items.component';
 import { MatTableModule } from '@angular/material/table';
+
 @NgModule({
   declarations: [
     AppComponent,

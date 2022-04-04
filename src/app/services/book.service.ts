@@ -5,6 +5,7 @@ import { Book } from '../interfaces/book';
 })
 export class BookService {
   private books: Book[] = [];
+  private shoppingCart: Book[] = [];
   constructor() {
     this.books = [
       {
@@ -57,5 +58,11 @@ export class BookService {
   getBookById(id: number) {
     let book = this.books.find((book) => book.id === id);
     return book;
+  }
+  addToCart(book: any) {
+    this.shoppingCart.push(book);
+  }
+  getCart(): Book[] {
+    return this.shoppingCart;
   }
 }
