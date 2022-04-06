@@ -1,18 +1,42 @@
 .account {
   background-color: #beb9b9;
   text-align: center;
-  width: 400px;
+  width: 450px;
   height: 570px;
+  overflow: auto;
   .cart-heading {
     display: flex;
     justify-content: center;
+    align-items: center;
+    .empty {
+      font-size: 20px;
+    }
     .shopping-cart {
-      width: 40px;
-      margin: 20px;
+      width: 80px;
+      margin: 30px;
     }
   }
 
   table {
     width: 100%;
+    border: 2px solid;
+    border-collapse: collapse;
+    background-color: white;
+    .topics,
+    td,
+    th {
+      padding: 2px;
+      box-shadow: inset 8px 8px 20px rgb(217, 214, 214);
+      border: 2px solid;
+    }
+    .bottomContainer {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      .amount {
+        width: 30px;
+        text-align: center;
+      }
+    }
   }
 }

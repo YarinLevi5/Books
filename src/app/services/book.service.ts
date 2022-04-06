@@ -21,6 +21,7 @@ export class BookService {
         genre: 'action',
         image: 'assets/images/fastAndFurious.jpg',
         price: 210,
+        quantity: 0,
       },
       {
         id: 2,
@@ -35,6 +36,7 @@ export class BookService {
         genre: 'drama',
         image: 'assets/images/cinderella.jpg',
         price: 70,
+        quantity: 0,
       },
       {
         id: 3,
@@ -49,6 +51,7 @@ export class BookService {
         genre: 'fantasy',
         image: 'assets/images/hp.jpg',
         price: 120,
+        quantity: 0,
       },
     ];
   }
