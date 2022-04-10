@@ -5,6 +5,7 @@ import { Book } from '../interfaces/book';
 })
 export class FilterByGenrePipe implements PipeTransform {
   transform(books: Book[], genre: string): Book[] {
+    if (!books) return [];
     if (!genre) return books;
     let filterdBook = books.filter((book) => book.genre.includes(genre));
     return filterdBook;

@@ -5,7 +5,7 @@ import { Book } from '../interfaces/book';
 })
 export class BookService {
   private books: Book[] = [];
-  private shoppingCart: Book[] = [];
+
   constructor() {
     this.books = [
       {
@@ -17,7 +17,6 @@ export class BookService {
             age: 55,
           },
         ],
-        date: new Date('1999-09-19'),
         genre: 'action',
         image: 'assets/images/fastAndFurious.jpg',
         price: 210,
@@ -32,7 +31,6 @@ export class BookService {
             age: 28,
           },
         ],
-        date: new Date('2008-01-29'),
         genre: 'drama',
         image: 'assets/images/cinderella.jpg',
         price: 70,
@@ -47,7 +45,6 @@ export class BookService {
             age: 16,
           },
         ],
-        date: new Date('2002-09-10'),
         genre: 'fantasy',
         image: 'assets/images/hp.jpg',
         price: 120,
@@ -61,11 +58,5 @@ export class BookService {
   getBookById(id: number) {
     let book = this.books.find((book) => book.id === id);
     return book;
-  }
-  addToCart(book: any) {
-    this.shoppingCart.push(book);
-  }
-  getCart(): Book[] {
-    return this.shoppingCart;
   }
 }

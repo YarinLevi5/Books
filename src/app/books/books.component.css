@@ -1,2 +1,2 @@
-.books{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.filter-icon-btn{margin-bottom:20px}.filter-fields{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:300px;margin-bottom:10px}.filter-fields .select-genre,.filter-fields .book-title{width:150px}.filter-fields .filter-btn{width:100px;background-color:grey;margin-left:50px;text-align:center}.books{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 /*# sourceMappingURL=books.component.css.map */

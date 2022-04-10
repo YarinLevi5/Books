@@ -1,6 +1,6 @@
 <div class="account">
   <div class="cart-heading" *ngIf="shoppingCart.length === 0">
-    <p class="empty">Your shopping cart is empty</p>
+    <p class="empty">YOUR BASKET IS EMPTY</p>
     <img
       src="assets/images/shop.png"
       alt="shopping-cart"
@@ -11,7 +11,7 @@
     <h1>Cart</h1>
     <img
       src="assets/images/shop.png"
-      alt="shopping-cart"
+      alt="shopping-cart image"
       class="shopping-cart"
     />
   </div>
@@ -40,5 +40,9 @@
         </td>
       </tr>
     </table>
+    <div class="total-price">
+      <button class="continue-btn">Continue</button>
+      <div class="total">TOTAL :</div>
+    </div>
   </div>
 </div>

@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Book } from '../interfaces/book';
-import { BookService } from '../services/book.service';
-
+import { CartService } from '../services/cart.service';
 @Component({
   selector: 'app-cart-items',
   templateUrl: './cart-items.component.html',
@@ -19,8 +18,8 @@ export class CartItemsComponent implements OnInit {
   }
 
   displayedColumns: string[] = ['image', 'title', 'price', 'qty'];
-  constructor(private BookService: BookService) {
-    this.shoppingCart = this.BookService.getCart();
+  constructor(private CartService: CartService) {
+    this.shoppingCart = this.CartService.getCart();
   }
 
   ngOnInit(): void {}

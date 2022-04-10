@@ -1,3 +1,25 @@
+.filter-icon-btn {
+  margin-bottom: 20px;
+}
+.filter-fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  margin-bottom: 10px;
+
+  .select-genre,
+  .book-title {
+    width: 150px;
+  }
+
+  .filter-btn {
+    width: 100px;
+    background-color: grey;
+    margin-left: 50px;
+    text-align: center;
+  }
+}
 .books {
   display: flex;
   justify-content: center;

@@ -1,2 +1,2 @@
-.book{width:300px;border:2px solid;margin:20px;padding:10px;height:520px;text-align:center}.book .image{width:300px;height:200px}.book .add-button{width:120px;margin:6px;padding:4px;background-color:red;border-radius:10px}.book .add-button:hover{background-color:#f38b8b}
+.book{width:350px;border:2px solid;margin:10px;height:520px;text-align:center}.book .image{width:350px;height:200px}.book .add-button{width:120px;margin:6px;padding:4px;background-color:red;border-radius:10px}.book .add-button:hover{background-color:#f38b8b}
 /*# sourceMappingURL=book.component.css.map */

@@ -1,9 +1,12 @@
 .account {
   background-color: #beb9b9;
   text-align: center;
-  width: 450px;
-  height: 570px;
+  width: 420px;
+  height: 100%;
   overflow: auto;
+  position: fixed;
+  bottom: 0;
+
   .cart-heading {
     display: flex;
     justify-content: center;
@@ -38,5 +41,24 @@
         text-align: center;
       }
     }
+  }
+}
+
+.total-price {
+  display: flex;
+  margin: 20px;
+  justify-content: space-between;
+  .total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    padding: 20px;
+    background-color: gray;
+  }
+  .continue-btn {
+    padding: 5px;
+    width: 200px;
+    background-color: #beb9b9;
   }
 }
