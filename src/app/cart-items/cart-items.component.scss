@@ -1,16 +1,24 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .account {
   background-color: #beb9b9;
+  width: 50%;
+  padding-bottom: 120px;
+  height: 90%;
   text-align: center;
-  width: 420px;
-  height: 100%;
   overflow: auto;
   position: fixed;
   bottom: 0;
+  border: 3px solid;
 
   .cart-heading {
     display: flex;
     justify-content: center;
     align-items: center;
+
     .empty {
       font-size: 20px;
     }
@@ -32,7 +40,7 @@
       box-shadow: inset 8px 8px 20px rgb(217, 214, 214);
       border: 2px solid;
     }
-    .bottomContainer {
+    .buttonsContainer {
       text-align: center;
       display: flex;
       justify-content: center;
@@ -42,23 +50,33 @@
       }
     }
   }
-}
 
-.total-price {
-  display: flex;
-  margin: 20px;
-  justify-content: space-between;
-  .total {
+  .total-price {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    width: 100px;
-    padding: 20px;
-    background-color: gray;
-  }
-  .continue-btn {
-    padding: 5px;
-    width: 200px;
-    background-color: #beb9b9;
+    height: 120px;
+    width: 50%;
+    position: fixed;
+    bottom: 0;
+    left: 400px;
+    background-color: rgb(229, 227, 227);
+    border: 2px solid;
+
+    .total {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+      width: 280px;
+      height: 50px;
+      background-color: gray;
+    }
+    .continue-btn {
+      margin: 20px;
+      width: 140px;
+      height: 50px;
+      background-color: #beb9b9;
+    }
   }
 }

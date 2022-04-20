@@ -1,26 +1,35 @@
-.filter-icon-btn {
-  margin-bottom: 20px;
-}
-.filter-fields {
+.wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 300px;
-  margin-bottom: 10px;
+  padding: 20px;
 
-  .select-genre,
-  .book-title {
-    width: 150px;
-  }
+  .filter-btn-container {
+    width: 400px;
+    .filter-icon-btn {
+      margin: 30px;
+      height: 40px;
+    }
+    .filter-fields {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px;
+      width: 300px;
+      background-color: aqua;
 
-  .filter-btn {
-    width: 100px;
-    background-color: grey;
-    margin-left: 50px;
-    text-align: center;
+      .select-genre,
+      .book-title {
+        width: 150px;
+      }
+
+      .filter-btn {
+        background-color: grey;
+        margin-left: 50px;
+        text-align: center;
+      }
+    }
   }
-}
-.books {
-  display: flex;
-  justify-content: center;
+  .books {
+    display: flex;
+    justify-content: end;
+  }
 }

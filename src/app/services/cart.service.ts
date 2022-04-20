@@ -5,7 +5,7 @@ import { Book } from '../interfaces/book';
 })
 export class CartService {
   private shoppingCart: Book[] = [];
-  constructor() {}
+  constructor() { }
 
   addToCart(book: any) {
     this.shoppingCart.push(book);
@@ -13,4 +13,12 @@ export class CartService {
   getCart(): Book[] {
     return this.shoppingCart;
   }
+
+  // totalPrice(): number {
+  //   let total = 0;
+  //   this.shoppingCart.forEach(book => {
+  //     total += book.price
+  //   });
+  //   return total;
+  // }
 }

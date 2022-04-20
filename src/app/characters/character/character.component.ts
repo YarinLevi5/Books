@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Character } from '../interfaces/character';
+import { Character } from '../../interfaces/character';
 @Component({
   selector: 'app-character',
   templateUrl: './character.component.html',
@@ -7,7 +7,7 @@ import { Character } from '../interfaces/character';
 })
 export class CharacterComponent implements OnInit {
   @Input() character?: Character;
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }

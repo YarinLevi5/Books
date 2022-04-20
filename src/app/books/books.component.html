@@ -1,45 +1,50 @@
-<button class="filter-icon-btn" (click)="showFilters()">
-  <img
-    src="../../assets/images/filter-icon.png"
-    alt="Filter icon for any field"
-    width="30px"
-  />
-</button>
-<div *ngIf="show" class="filter-fields">
-  <label>
-    Genre :
-    <select (change)="selectedGenre($event)" class="select-genre">
-      <option></option>
-      <option value="horror">Horror</option>
-      <option value="comedy">Comedy</option>
-      <option value="action">Action</option>
-      <option value="crime">Crime</option>
-      <option value="romance">Romance</option>
-      <option value="drama">Drama</option>
-      <option value="fantasy">Fantasy</option>
-      <option value="animation">Animation</option>
-    </select>
-  </label>
-  <label
-    >Title :
-    <input type="text" [(ngModel)]="title" class="book-title" />
-  </label>
-  <label
-    >Price :
-    <input type="range" min="50" max="250" [(ngModel)]="price" />
-    <span>{{ price | currency: "NIS" }}</span>
-  </label>
-  <button (click)="filterByGenre()" class="filter-btn">Filter</button>
-</div>
+<div class="wrapper">
+  <div class="filter-btn-container">
+    <button class="filter-icon-btn" (click)="showFilters()">
+      <img
+        src="../../assets/images/filter-icon.png"
+        alt="Filter icon for any field"
+        width="30px"
+      />
+    </button>
+  </div>
+  <div *ngIf="show" class="filter-fields">
+    <p>Filters</p>
+    <label>
+      Genre :
+      <select (change)="selectedGenre($event)" class="select-genre">
+        <option></option>
+        <option value="horror">Horror</option>
+        <option value="comedy">Comedy</option>
+        <option value="action">Action</option>
+        <option value="crime">Crime</option>
+        <option value="romance">Romance</option>
+        <option value="drama">Drama</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="animation">Animation</option>
+      </select>
+    </label>
+    <label
+      >Title :
+      <input type="text" [(ngModel)]="title" class="book-title" />
+    </label>
+    <label
+      >Price :
+      <input type="range" min="50" max="250" [(ngModel)]="price" />
+      <span>{{ price | currency: "NIS" }}</span>
+    </label>
+    <button (click)="filterByGenre()" class="filter-btn">Filter</button>
+  </div>
 
-<div class="books">
-  <app-book
-    *ngFor="
-      let book of books
-        | filterByGenre: searchByGenre
-        | filterByTitle: searchByTitle
-        | filterByPrice: searchByPrice
-    "
-    [book]="book"
-  ></app-book>
+  <div class="books">
+    <app-book
+      *ngFor="
+        let book of books
+          | filterByGenre: searchByGenre
+          | filterByTitle: searchByTitle
+          | filterByPrice: searchByPrice
+      "
+      [book]="book"
+    ></app-book>
+  </div>
 </div>

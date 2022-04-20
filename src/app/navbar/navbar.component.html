@@ -8,22 +8,30 @@
       <h1 class="books-store-heading">Books Store</h1>
       <ul class="navbar-nav mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Home</a>
+          <a
+            routerLink="/home"
+            routerLinkActive="active"
+            class="nav-link"
+            aria-current="page"
+            >Home</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About </a>
+          <a class="nav-link" routerLinkActive="active" href="#">About </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a routerLink="/store" routerLinkActive="active" class="nav-link"
+            >Store</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a routerLink="/cart" routerLinkActive="active" class="nav-link">
             <img
               src="../../assets/images/shop.png"
               alt="image of shopping-cart"
               width="30px"
             />
-            <span class="badge badge-pill bg-danger">0</span>
+            <span class="badge badge-pill bg-danger">{{ sum }}</span>
           </a>
         </li>
       </ul>

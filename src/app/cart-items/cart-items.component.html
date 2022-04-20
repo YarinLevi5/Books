@@ -1,48 +1,48 @@
-<div class="account">
-  <div class="cart-heading" *ngIf="shoppingCart.length === 0">
-    <p class="empty">YOUR BASKET IS EMPTY</p>
-    <img
-      src="assets/images/shop.png"
-      alt="shopping-cart"
-      class="shopping-cart"
-    />
-  </div>
-  <div class="cart-heading" *ngIf="shoppingCart.length">
-    <h1>Cart</h1>
-    <img
-      src="assets/images/shop.png"
-      alt="shopping-cart image"
-      class="shopping-cart"
-    />
-  </div>
-  <!-- <p *ngIf="empty">Shopping Cart is empty</p> -->
-
-  <div>
-    <table>
-      <tr class="topics">
-        <th>Image</th>
-        <th>Title</th>
-        <th>Price</th>
-        <th>Qty</th>
-      </tr>
-      <tr *ngFor="let item of shoppingCart">
-        <td>
-          <img src="{{ item.image }}" alt="{{ item.title }}" width="120px" />
-        </td>
-        <td>{{ item.title }}</td>
-        <td>{{ item.price | currency: "NIS" }}</td>
-        <td>
-          <div class="bottomContainer">
-            <button (click)="increment()" class="plus">+</button>
-            <input type="text" [value]="amount" class="amount" />
-            <button (click)="decrement()" class="minus">-</button>
-          </div>
-        </td>
-      </tr>
-    </table>
-    <div class="total-price">
+<div class="wrapper">
+  <div class="account">
+    <div class="cart-heading" *ngIf="shoppingCart.length === 0">
+      <p class="empty">YOUR BASKET IS EMPTY</p>
+      <img
+        src="assets/images/shop.png"
+        alt="shopping-cart"
+        class="shopping-cart"
+      />
+    </div>
+    <div class="cart-heading" *ngIf="shoppingCart.length !== 0">
+      <h1>Cart</h1>
+      <img
+        src="assets/images/shop.png"
+        alt="shopping-cart image"
+        class="shopping-cart"
+      />
+    </div>
+    <div>
+      <table>
+        <tr class="topics" *ngIf="shoppingCart.length !== 0">
+          <th>Image</th>
+          <th>Title</th>
+          <th>Price</th>
+          <th>Qty</th>
+        </tr>
+        <tr *ngFor="let item of shoppingCart">
+          <td>
+            <img src="{{ item.image }}" alt="{{ item.title }}" width="120px" />
+          </td>
+          <td>{{ item.title }}</td>
+          <td>{{ item.price | currency: "NIS" }}</td>
+          <td>
+            <div class="buttonsContainer">
+              <button (click)="increment()" class="plus">+</button>
+              <input type="text" [value]="amount" class="amount" />
+              <button (click)="decrement()" class="minus">-</button>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="total-price" *ngIf="shoppingCart.length !== 0">
       <button class="continue-btn">Continue</button>
-      <div class="total">TOTAL :</div>
+      <div class="total">TOTAL : {{ totalPrice }}</div>
     </div>
   </div>
 </div>
