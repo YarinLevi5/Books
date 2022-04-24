@@ -8,11 +8,11 @@ import { CartService } from '../services/cart.service';
 })
 export class CartItemsComponent implements OnInit {
   shoppingCart: Book[] = [];
-  @Input() amount = 0;
-  @Input() totalPrice = 0;
+  @Input() amount = 0
+  @Input() totalPrice = '0 NIS';
 
   increment() {
-    ++this.amount;
+    ++this.amount
   }
   decrement() {
     this.amount <= 0 ? (this.amount = 0) : --this.amount;
@@ -20,6 +20,7 @@ export class CartItemsComponent implements OnInit {
 
   displayedColumns: string[] = ['image', 'title', 'price', 'qty'];
   constructor(private CartService: CartService) {
+    this.totalPrice = this.CartService.totalPrice()
   }
 
   ngOnInit(): void {

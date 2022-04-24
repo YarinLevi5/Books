@@ -8,7 +8,6 @@ import { BookService } from '../../services/book.service';
   styleUrls: ['./book.component.scss'],
 })
 export class BookComponent implements OnInit {
-
   @Input() book?: Book;
   constructor(
     private CartService: CartService,
@@ -16,7 +15,7 @@ export class BookComponent implements OnInit {
   ) { }
 
   addTOCart() {
-    let book = this.BookService.getBookById(this.book?.id ?? 0);
+    let book = this.BookService.getBookById(this.book?.id ?? 0)
     this.CartService.addToCart(book);
   }
 
