@@ -9,7 +9,7 @@ export class BookService {
   constructor() {
     this.books = [
       {
-        id: 1,
+        id: '1',
         title: 'Fast And Fuirous',
         characters: [
           {
@@ -23,7 +23,7 @@ export class BookService {
         quantity: 0,
       },
       {
-        id: 2,
+        id: '2',
         title: 'Cinderella',
         characters: [
           {
@@ -37,7 +37,7 @@ export class BookService {
         quantity: 0,
       },
       {
-        id: 3,
+        id: '3',
         title: 'Harry Potter',
         characters: [
           {
@@ -55,7 +55,7 @@ export class BookService {
   getBooks(): Book[] {
     return this.books;
   }
-  getBookById(id: number) {
+  getBookById(id: string) {
     let book = this.books.find((book) => book.id === id);
     return book;
   }

@@ -15,7 +15,7 @@ export class BookComponent implements OnInit {
   ) { }
 
   addTOCart() {
-    let book = this.BookService.getBookById(this.book?.id ?? 0)
+    let book = this.BookService.getBookById(this.book?.id ?? '')
     this.CartService.addToCart(book);
   }
 

@@ -32,9 +32,11 @@
           <td>{{ item.price | currency: "NIS" }}</td>
           <td>
             <div class="buttonsContainer">
-              <button (click)="increment()" class="plus">+</button>
-              <input type="text" [value]="amount" class="amount" />
-              <button (click)="decrement()" class="minus">-</button>
+              <button (click)="increment(item.id ?? '')" class="plus">+</button>
+              <input type="text" [(ngModel)]="amount" class="amount" />
+              <button (click)="decrement(item.id ?? '')" class="minus">
+                -
+              </button>
             </div>
           </td>
         </tr>

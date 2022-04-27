@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Book } from '../interfaces/book';
+
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
   private shoppingCart: Book[] = [];
-  private static qty: number = 0;
   constructor() { }
 
   addToCart(book: any): void {
@@ -13,8 +13,7 @@ export class CartService {
     if (!isExist) {
       this.shoppingCart.push(book);
     } else {
-      book.quantity++
-      CartService.qty++;
+      isExist.quantity++
     }
   }
   getCart(): Book[] {
@@ -22,16 +21,22 @@ export class CartService {
   }
 
   qtyOfItems(): number {
-    return CartService.qty;
+    let qtyOfBooks = 0;
+    this.shoppingCart.forEach(book => {
+      qtyOfBooks += book.quantity
+    });
+    return qtyOfBooks
   }
 
   totalPrice(): string {
     let total = 0;
     this.shoppingCart.forEach(book => {
-      total += book.price
+      total += book.price * book.quantity
     });
     let nis = 'NIS'
     return `${total} ${nis}`;
   }
 
 }
+
+

@@ -1,6 +1,6 @@
 import { Character } from './character';
 export interface Book {
-  id?: number;
+  id?: string;
   title: string;
   characters: Character[];
   genre: string;
