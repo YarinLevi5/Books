@@ -20,11 +20,18 @@
       .book-title {
         width: 150px;
       }
-
-      .filter-btn {
-        background-color: grey;
-        margin-left: 50px;
-        text-align: center;
+      .btns {
+        width: 200px;
+        margin: 10px;
+        padding: 2px;
+        .filter-btn,
+        .reset-btn {
+          width: 80px;
+          padding: 2px;
+          background-color: grey;
+          margin-left: 50px;
+          text-align: center;
+        }
       }
     }
   }

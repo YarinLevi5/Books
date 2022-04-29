@@ -34,5 +34,11 @@ export class BooksComponent implements OnInit {
     this.searchByPrice = this.price;
   }
 
-  ngOnInit(): void {}
+  reset() {
+    this.title = this.genre = '';
+    this.price = 0;
+    this.books = this.bookService.getBooks();
+  }
+
+  ngOnInit(): void { }
 }

@@ -25,6 +25,10 @@ export class CartItemsComponent implements OnInit {
     this.totalPrice = this.CartService.totalPrice()
   }
 
+  removeBook(bookId: string) {
+    this.CartService.removeBook(bookId)
+  }
+
   ngOnInit(): void {
     this.shoppingCart = this.CartService.getCart();
     this.amount = this.CartService.qtyOfItems()

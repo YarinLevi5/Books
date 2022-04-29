@@ -23,6 +23,7 @@
           <th>Title</th>
           <th>Price</th>
           <th>Qty</th>
+          <th>Remove</th>
         </tr>
         <tr *ngFor="let item of shoppingCart">
           <td>
@@ -38,6 +39,16 @@
                 -
               </button>
             </div>
+          </td>
+          <td>
+            <a>
+              <img
+                src="../../assets/images/trash-can.png"
+                alt="Trash can image"
+                width="40px"
+                (click)="removeBook(item.id ?? '')"
+              />
+            </a>
           </td>
         </tr>
       </table>

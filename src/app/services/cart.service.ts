@@ -37,6 +37,11 @@ export class CartService {
     return `${total} ${nis}`;
   }
 
+  removeBook(bookId: string): Book[] {
+    let idx = this.shoppingCart.findIndex((book) => book.id === bookId)
+    return this.shoppingCart.splice(idx, 1)
+  }
+
 }
 
 

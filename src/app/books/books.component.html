@@ -33,7 +33,10 @@
       <input type="range" min="50" max="250" [(ngModel)]="price" />
       <span>{{ price | currency: "NIS" }}</span>
     </label>
-    <button (click)="filterByGenre()" class="filter-btn">Filter</button>
+    <div class="btns">
+      <button (click)="filterByGenre()" class="filter-btn">Filter</button>
+      <button (click)="reset()" class="reset-btn">Reset</button>
+    </div>
   </div>
 
   <div class="books">
