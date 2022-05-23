@@ -1,3 +1,4 @@
+import { CartService } from 'src/app/services/cart.service';
 import { Injectable } from '@angular/core';
 import { Book } from '../interfaces/book';
 
@@ -39,9 +40,9 @@ export class CartService {
 
   removeBook(bookId: string): Book[] {
     let idx = this.shoppingCart.findIndex((book) => book.id === bookId)
+
     return this.shoppingCart.splice(idx, 1)
   }
 
 }
-
 

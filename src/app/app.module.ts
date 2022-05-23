@@ -17,6 +17,7 @@ import { FilterByPricePipe } from './pipes/filter-by-price.pipe';
 import { HomeComponent } from './pages/home/home.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { StoreComponent } from './pages/store/store.component';
+import { CartItemComponent } from './cart-items/cart-item/cart-item.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +33,7 @@ import { StoreComponent } from './pages/store/store.component';
     HomeComponent,
     CartComponent,
     StoreComponent,
+    CartItemComponent,
   ],
   imports: [
     BrowserModule,

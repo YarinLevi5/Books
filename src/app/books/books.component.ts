@@ -7,7 +7,7 @@ import { BookService } from '../services/book.service';
   templateUrl: './books.component.html',
   styleUrls: ['./books.component.scss'],
 })
-export class BooksComponent implements OnInit {
+export class BooksComponent {
   @Input() genre = '';
   @Input() title = '';
   @Input() price = 0;
@@ -40,5 +40,4 @@ export class BooksComponent implements OnInit {
     this.books = this.bookService.getBooks();
   }
 
-  ngOnInit(): void { }
 }

@@ -8,9 +8,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   @Input() sum = 0;
-  constructor(private CartService: CartService) {
+  constructor(private CartService: CartService) { }
+
+  ngOnInit(): void {
     this.sum = this.CartService.qtyOfItems()
   }
-
-  ngOnInit(): void { }
 }
